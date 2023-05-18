@@ -1,13 +1,13 @@
-<header class="header clearfix element_to_stick">
+<header class="header clearfix element_to_stick ">
     <div class="layer"></div>
-    <div class="container-fluid">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
         <div id="logo">
             <a href="{{ route('home') }}">
-                <img src="{{ asset($general ? $general->logo:'') }}" width="140" height="35" alt="" class="logo_normal">
-                <img src="{{ asset($general ? $general->logo:'') }}" width="140" height="35" alt="" class="logo_sticky">
+                <img src="{{ asset($general ? $general->logo:'') }}" width="140" height="140" alt="" class="logo_normal">
+                <img src="{{ asset($general ? $general->logo:'') }}" width="140" height="140" alt="" class="logo_sticky">
             </a>
         </div>
-        <ul id="top_menu">
+        <!-- <ul id="top_menu">
             <li><a href="#0" class="search-overlay-menu-btn"><i class="fas fa-search"></i></a></li>
             @guest
                 @else
@@ -17,7 +17,7 @@
                     </div>
                 </li>
             @endguest
-        </ul>
+        </ul> -->
         <!-- /top_menu -->
         <a href="#" class="open_close">
             <i class="icon_menu"></i><span>Menu</span>
