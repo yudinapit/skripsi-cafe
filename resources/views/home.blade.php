@@ -114,7 +114,7 @@
     </section>
 
 
-    <div class="bg_gray">
+    <!-- <div class="bg_gray">
         <div class="container margin_120_100" data-cue="slideInUp">
             <div class="main_title center mb-5">
                 <span><em></em></span>
@@ -157,15 +157,14 @@
                                 <p>Hamburgher, Chips, Mix Sausages, Beer, Muffin</p>
                                 <a href="reservations.html" class="btn_1">Reserve now</a>
                             </div>
-                            <!-- <figure class="d-none d-lg-block"><img src="img/banner.svg" alt="" width="200"
-                                    height="200" class="img-fluid"></figure> -->
+                          
                         </div>
                     </div>
                 </div>
             </div>
             <p class="text-center"><a href="#0" class="btn_1 outline" data-cue="zoomIn">Download Menu (PDF)</a></p>
         </div>
-    </div>
+    </div> -->
 
     <div class="call_section lazy">
         <div class="overlay">
@@ -188,7 +187,7 @@
             </div>
         </div>
 
-        <div class="pattern_2 pattern_calendar">
+        <!-- <div class="pattern_2 pattern_calendar">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-12" data-cue="slideInUp">
@@ -211,7 +210,7 @@
                                         <div id="DatePicker"></div>
                                     </div>
                                     <!-- /step-->
-                                    <div class="step">
+                                    <!-- <div class="step">
                                         <h3 class="main_question"><strong>2/3</strong> Select time and guests</h3>
                                         <div class="step_wrapper">
                                             <h4>Time</h4>
@@ -334,5 +333,5 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --> -->
 @endsection
