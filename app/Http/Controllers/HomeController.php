@@ -40,6 +40,8 @@ class HomeController extends Controller
         return view('home', compact('sliders', 'menus'));
     }
 
+    
+
     public function menu()
     {
         $starters = Menu::orderBy('price')->limit(4)->get();

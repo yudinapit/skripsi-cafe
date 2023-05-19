@@ -310,20 +310,34 @@ a.btn_play {
     z-index: 99;
 }
 
+@media (max-width: 990px) {
+    #logo a img {
+        display: none;
+    }
+}
+
 @media (max-width: 767px) {
     a.btn_play {
         display: none;
     }
 }
 
+a.btn_play {
+    width: 100px;
+    height: 100px;
+    color: #513819;
+}
+
 a.btn_play:hover {
+    width: 100px;
+    height: 100px;
     color: #513819;
 }
 
 .pulse_bt {
     display: block;
-    width: 45px;
-    height: 45px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     box-shadow: 0 0 0 rgba(255, 255, 255, 0.4);
     animation: pulseanime 2.5s infinite;
@@ -586,6 +600,10 @@ header.sticky a.open_close {
     font-weight: 500;
 }
 
+.main-menu>ul>li>img {
+    color: #fff;
+}
+
 .main-menu>ul>li:hover>a {
     color: #513819;
 }
@@ -772,13 +790,16 @@ header.sticky .main-menu>ul>li:hover>a {
     }
 }
 
+.warna {
+    color: #111;
+}
+
 @media only screen and (max-width: 991px) {
     #header_menu {
         display: block;
         text-align: center;
         position: relative;
         padding: 30px 0 25px 0;
-        background-color: #513819;
     }
 
     #header_menu a.open_close {

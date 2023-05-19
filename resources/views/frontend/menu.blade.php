@@ -33,11 +33,11 @@
                                 <span class="new_price">${{ $item->price }}</span>
                                 {{-- <span class="old_price">${{ $item->price }}</span> --}}
                             </div>
-                            @guest
+                            <!-- @guest
                                     <a href="javascript:void(0)" class="btn_1" data-bs-toggle="modal" data-bs-target="#exampleModal">add to cart</a>
                                     @else
                                     <a class="btn_1" href="{{ route('cart.add', [$item->id, auth()->user()->id]) }}">add to cart</a>
-                                    @endguest
+                                    @endguest -->
                         </div>
                     </div>
                     @endforeach
@@ -67,19 +67,19 @@
                                 <span class="new_price">${{ $item->price }}</span>
                                 {{-- <span class="old_price">${{ $item->price }}</span> --}}
                             </div>
-                            @guest
+                            <!-- @guest
                                     <a href="javascript:void(0)" class="btn_1" data-bs-toggle="modal" data-bs-target="#exampleModal">add to cart</a>
                                     @else
                                     <a class="btn_1" href="{{ route('cart.add', [$item->id, auth()->user()->id]) }}">add to cart</a>
-                                    @endguest
+                                    @endguest -->
                         </div>
                     </div>
                     @endforeach
                 @endif
             </div>
 
-        <div class="banner lazy">
+        <!-- <div class="banner lazy">
             <p class="text-center"><a href="#0" class="btn_1 outline">Download Menu (PDF)</a></p>
-        </div>
+        </div> -->
     </div>
 @endsection

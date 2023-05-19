@@ -36,8 +36,9 @@
                     <figure>
                         <img src="{{ asset('assets/frontend/img/home_1.jpg') }}" data-src="{{ asset('assets/frontend/img/home_1.jpg') }}" width="354" height="440"
                             alt="" class="img-fluid lazy">
-                        <a href="https://www.youtube.com/watch?v=MO7Hi_kBBBg" class="btn_play" data-cue="zoomIn"
-                            data-delay="500"><span class="pulse_bt"><i class="arrow_triangle-right"></i></span></a>
+                            <a href="https://www.youtube.com/embed/kR67lJ8tiV4" class="btn_play" data-cue="zoomIn"
+                            data-delay="500"><span class="pulse_bt"><img src="{{ asset('assets/frontend/img/play_btn.svg') }}" data-src="{{ asset('assets/frontend/img/play_btn.svg') }}" width="354" height="440"
+                            alt="" class="img-fluid lazy"></span></a>
                     </figure>
                 </div>
                 <div class="col-lg-5 pt-lg-4" data-cue="slideInUp" data-delay="500">
@@ -47,7 +48,7 @@
                         <p>{{ $general ? $general->story_title:'' }}</p>
                     </div>
                     <p>{!! $general ? $general->story_description:'' !!}</p>
-                    <p><img src="{{ asset('assets/frontend/img/signature.png') }}" width="140" height="50" alt="" class="mt-3"></p>
+                    <!-- <p><img src="{{ asset('assets/frontend/img/signature.png') }}" width="140" height="50" alt="" class="mt-3"></p> -->
                 </div>
             </div>
         </div>
@@ -333,5 +334,5 @@
                     </div>
                 </div>
             </div>
-        </div> --> -->
+        </div> -->
 @endsection
