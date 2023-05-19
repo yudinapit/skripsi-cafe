@@ -23,13 +23,13 @@
                 <h3>Keep in touch</h3>
                 <div id="newsletter">
                     <div id="message-newsletter"></div>
-                    <form>
+                    <!-- <form>
                         <div class="form-group">
                             <input type="email" name="email_newsletter" id="email_newsletter" class="form-control"
                                 placeholder="Your email">
                             <button type="submit" id="submit-newsletter"><i class="arrow_carrot-right"></i></button>
                         </div>
-                    </form>
+                    </form> -->
                     <div class="follow_us">
                         <ul>
                             <li><a href="{{ $general ? $general->facebook:'' }}"><i class="fab fa-facebook-f"></i></a></li>

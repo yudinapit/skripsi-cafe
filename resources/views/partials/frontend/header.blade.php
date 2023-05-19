@@ -1,10 +1,11 @@
-<header class="header clearfix element_to_stick ">
+<header class="header clearfix element_to_stick">
+<div class="container">
     <div class="layer"></div>
     <div class="container-fluid d-flex align-items-center justify-content-between">
         <div id="logo">
             <a href="{{ route('home') }}">
-                <img src="{{ asset($general ? $general->logo:'') }}" width="140" height="140" alt="" class="logo_normal">
-                <img src="{{ asset($general ? $general->logo:'') }}" width="140" height="140" alt="" class="logo_sticky">
+                <img src="{{ asset($general ? $general->logo:'') }}" width="60" height="60" alt="" class="logo_normal">
+                <img src="{{ asset($general ? $general->logo:'') }}" width="60" height="60" alt="" class="logo_sticky">
             </a>
         </div>
         <!-- <ul id="top_menu">
@@ -25,14 +26,14 @@
         <nav class="main-menu">
             <div id="header_menu">
                 <a href="#0" class="open_close">
-                    <i class="icon_close"></i><span>Menu</span>
+                    <i class="icon_close warna"></i><span>Menu</span>
                 </a>
-                <a href="index.html"><img src="img/logo.svg" width="140" height="35" alt=""></a>
+                <a href="index.html"><img src="{{ asset($general ? $general->logo:'') }}" width="140" alt=""></a>
             </div>
             <ul>
-                <li class="submenu">
+                <!-- <li class="submenu">
                     <a href="{{ route('home') }}" class="show-submenu">Home</a>
-                </li>
+                </li> -->
                 <li class="submenu">
                     <a href="{{ route('about') }}" class="show-submenu">About Us</a>
                 </li>
@@ -53,8 +54,8 @@
                     <a href="{{ route('contact') }}" class="show-submenu">Contact Us</a>
                 </li>
                 @guest
-                <li><a href="javascript:void(0)" class="btn_top" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a></li>
-                <li><a href="javascript:void(0)" class="btn_top" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a></li>
+                <!-- <li><a href="javascript:void(0)" class="btn_top" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a></li>
+                <li><a href="javascript:void(0)" class="btn_top" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a></li> -->
                 @else
                 <li>
                     <a class="btn_top" href="{{ route('logout') }}"
@@ -79,4 +80,5 @@
             <button type="submit"><i class="icon_search"></i></button>
         </form>
     </div><!-- End Search -->
+    </div>
 </header>
