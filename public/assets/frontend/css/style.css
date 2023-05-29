@@ -203,7 +203,7 @@ a.btn_1 {
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
-    padding: 8px 25px;
+    padding: 10px 24px;
     color: #fff;
     font-weight: 500;
     text-align: center;
@@ -217,7 +217,7 @@ a.btn_1 {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
-    border-radius: 3px;
+    border-radius: 10px;
     line-height: normal;
 }
 
@@ -594,7 +594,7 @@ header.sticky a.open_close {
 
 .main-menu>ul>li>a {
     color: #fff;
-    padding: 5px 8px;
+    padding: 5px 12px;
     font-size: 14px;
     font-size: 0.875rem;
     font-weight: 500;
@@ -1827,7 +1827,7 @@ a.img_container .short_info p {
     background-color: #262626;
     color: #fff;
     padding: 45px;
-    border-radius: 5px;
+    border-radius: 12px !important;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -1858,7 +1858,7 @@ a.img_container .short_info p {
     background: #262626;
     padding: 20px;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 12px !important;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -1868,7 +1868,7 @@ a.img_container .short_info p {
 .call_section_img img {
     height: 100% !important;
     object-fit: cover !important;
-    border-radius: 5px;
+    border-radius: 12px !important;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -1893,9 +1893,9 @@ a.img_container .short_info p {
     content: "";
     width: 200px;
     height: 200px;
-    background: #513819;
-    top: -30px;
-    left: -30px;
+    background: none;
+    top: -11px;
+    left: -10px;
     z-index: -1;
     border-radius: 5px;
 }
@@ -3079,6 +3079,7 @@ a.img_container .short_info p {
 }
 
 .box_contacts {
+    height: 227px;
     background-color: #fff;
     padding: 30px 15px;
     -webkit-border-radius: 5px;
@@ -3624,7 +3625,7 @@ iframe.map_contact {
 }
 
 footer {
-    background-color: #282C35 !important;
+    background-color: #262626 !important;
     padding: 60px 0 10px 0;
     color: rgba(255, 255, 255, 0.6);
     position: relative;
