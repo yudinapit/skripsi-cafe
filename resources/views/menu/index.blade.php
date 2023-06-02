@@ -29,7 +29,7 @@
                                     </td>
                                     <td>{{ $item->title }}</td>
                                     <td>{{ $item->category->name }}</td>
-                                    <td>${{ $item->price }}</td>
+                                    <td>IDR {{ $item->price }}</td>
                                     <td><span class="badge {{ $item->status == 1 ? 'badge-primary':'badge-warning' }}">{{ $item->status == 1 ? 'Published':'Draft' }}</span></td>
                                     <td>
                                         <a class="btn btn-primary" href="{{ route('menu.edit', $item->id) }}">Edit</a>
