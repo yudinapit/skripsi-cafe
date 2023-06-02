@@ -66,7 +66,7 @@
                                                     <tr>
                                                         <td>{{ $loop->index + 1 }}</td>
                                                         <td>
-                                                            <img width="60" src="{{ asset($order->menu->thumbnail) }}" alt="thumbnail">
+                                                            <img width="60" src="{{ asset($order->menu->thumbnail ?? '') }}" alt="thumbnail">
                                                         </td>
                                                         <td>{{ $order->quantity }}</td>
                                                         <td>{{ $order->price }}</td>

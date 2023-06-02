@@ -22,4 +22,11 @@ class Menu extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function scopeFilter($query, $filter)
+    {
+        return $query->when($filter->category ?? false, function ($query) use ($filter) {
+            return $query->where('category_id', $filter->category);
+        });
+    }
 }

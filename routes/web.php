@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FrontMenuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,17 @@ Auth::routes();
 // Route::get('/login', [App\Http\Controllers\HomeController::class, 'login'])->name('login');
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/menu', [App\Http\Controllers\HomeController::class, 'menu'])->name('menu');
+Route::group(['prefix' => 'menu'], function() {
+    // Route::get('/', [FrontMenuController::class, 'index'])->name('menu');
+    // Route::post('/', [FrontMenuController::class, 'scanMenu'])->name('scanMenu');
+    Route::get('/list/{menu}', [FrontMenuController::class, 'listMenu'])->name('listMenu');
+    Route::get('/checkout/done', [FrontMenuController::class, 'doneCheckout'])->name('listMenu');
+    Route::post('/list/{menu}/deleteCart', [FrontMenuController::class, 'deleteCart'])->name('deleteMenu');
+    Route::post('/list/checkout/{table}', [FrontMenuController::class, 'checkout'])->name('checkout');
+    Route::get('/list/checkout/{table}', [FrontMenuController::class, 'checkoutGet'])->name('checkout');
+    Route::get('/getMenu', [FrontMenuController::class, 'getMenu'])->name('getMenu');
+    Route::get('/getDetailMenu/{id}', [FrontMenuController::class, 'getDetailMenu'])->name('getDetailMenu');
+});
 Route::post('/mail', [App\Http\Controllers\HomeController::class, 'mail'])->name('mail');
 //cart routes
 Route::get('/carts/{user}', [App\Http\Controllers\CartController::class, 'getCart'])->name('getcart');

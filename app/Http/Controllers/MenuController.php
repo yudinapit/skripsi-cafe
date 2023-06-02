@@ -17,6 +17,9 @@ class MenuController extends Controller
     {
         $page_title = "Menu List";
         $menues = Menu::all();
+        foreach($menues as $item) {
+            $item->price = str_replace('.','',$item->price);
+        }
 
         return view('menu.index', compact('page_title', 'menues'));
     }
