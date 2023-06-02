@@ -90,16 +90,17 @@ class FrontMenuController extends Controller
                 'message' => $validasi->errors()
             ], 405);
 
+        $findData = [];
         foreach($data as $val) {
-            $data[$val->id] = $val;
+            $findData[$val->id] = $val;
         }
         $totalPrice = 0;
         $totalQty = 0;
         $serviceCharge = 0;
         $pb1 = 0;
         foreach($menu as $item) {
-            $item->qty = $data[$item->id]->qty ?? 0;
-            $item->price_checkout =  str_replace('.','', $data[$item->id]->price  ?? 0);
+            $item->qty = $findData[$item->id]->qty ?? 0;
+            $item->price_checkout =  str_replace('.','', $findData[$item->id]->price  ?? 0);
             $totalPrice += $item->qty * str_replace('.','', $item->price  ?? 0);
             $totalQty += $item->qty;
             $serviceCharge += ($item->price_checkout * $item->qty) * 0.05;
@@ -123,6 +124,7 @@ class FrontMenuController extends Controller
                     'menus_id' => $item->id,
                     'qty' => $item->qty,
                     'price_total' => $item->price_checkout,
+                    'notes' => $findData[$item->id]->notes ?? '',
                 ]);
             }
 

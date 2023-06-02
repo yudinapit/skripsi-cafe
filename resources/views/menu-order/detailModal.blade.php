@@ -34,6 +34,9 @@
             <td style="width: 20%">{{ $item->qty }}x</td>
             <td style="width: 80%; text-align: right; white-space: nowrap"><b>Rp {{ number_format($item->price_total * $item->qty, 0, ',', '.') }}</b></td>
         </tr>
+        <tr>
+            <td style="width: 100%; font-size: 12px"><b>Notes</b>: {{ $item->notes }}</td>
+        </tr>
        @endforeach
     </table>
 </div>

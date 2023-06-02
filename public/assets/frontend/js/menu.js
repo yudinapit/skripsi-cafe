@@ -79,7 +79,8 @@ $(function() {
             id: id,
             title: title,
             qty: qty,
-            price: price
+            price: price,
+            notes: ''
         };
         setAddToCart(data);
     }).on('hidden.bs.modal', function() {

@@ -16,23 +16,25 @@
 </style>
 @endpush
 <div class="py-5" id="listMenu">
-    <div class="row g-sm-4 g-3 py-3">
+    <div class="row g-sm-4 g-3 pt-3 pb-5">
         @foreach ($data as $item)
         <div class="col-12" id="menuSelect-{{ $item->id }}">
-            <div class="card radius-10 rounded-10 menu-item" data-id="{{ $item->id }}" data-qty="{{ $item->qty }}" style="cursor: pointer; border: 1px solid #ECECEC">
+            <div class="card rounded-12 menu-item" style="cursor: pointer; border: 1px solid #ECECEC">
                 <div class="card-body">
                     <div class="vstack justify-content-between gap-3 item-menu-bottom">
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="font-size-16 font-weight-500" style="color: #323232">{{ $item->title }}</div>
                             <div>
-                                <button class="btn btn-secondary rounded-10 font-sizze-10 font-weight-700 border-0 px-3" style="background: #EFEFEF; color: #363B45">
-                                    Edit
+                                <button class="btn btn-secondary rounded-8 font-size-12 font-weight-700 border-0 px-3 edit-item"  data-id="{{ $item->id }}" data-qty="{{ $item->qty }}" style="background: #EFEFEF; color: #513819">
+                                    Edit Quantity
                                 </button>
                             </div>
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
-                            <div class="font-size-16 font-weight-700" style="color: #848484">
-                                Rp {{ number_format($item->price, 0, ',', '.' ) }}
+                            <div>
+                                <div class="font-size-16 font-weight-700" style="color: #848484">
+                                    Rp {{ number_format($item->price, 0, ',', '.' ) }}
+                                </div>
                             </div>
                             <div class="font-weight-700 font-size-16">
                                 x
@@ -41,6 +43,11 @@
                                 </span>
                             </div>
                        </div>
+                    </div>
+                    <div class="notes-change">
+                        <div class="d-none pt-2" id="notes-desc-{{ $item->id }}"></div>
+                        <div class="mt-3" id="notesMenu-{{ $item->id }}">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -142,6 +149,39 @@
                         Remove from cart
                     </button>
                 </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="modal fade" id="modalNotes" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0" style="border-radius: 20px">
+        <div class="modal-body p-4">
+          <div class="d-flex align-items-center gap-4">
+            <div role="button" class="close" data-bs-dismiss="modal" aria-label="close">
+                <img src="{{ asset('assets/frontend/img/icon-times.svg') }}" />
+            </div>
+            <div class="font-size-20">
+                Add notes <span class="font-weight-700 name-menu-detail"></span>
+            </div>
+          </div>
+          <div class="py-4">
+            <textarea class="form-control notes-menu" style="border: 0; border-top: 1px dashed #CDCECE; border-bottom: 1px dashed #CDCECE; min-height: 150px"></textarea>
+          </div>
+          <div class="hstack justify-content-between gap-sm-0 gap-2">
+            <div>
+                <div class="font-size-12" style="color: #848484"><span class="lengthText">0</span>/200</div>
+            </div>
+            <div>
+               <form id="saveToCart">
+                    <input type="hidden" name="id" />
+                    <input type="hidden" name="price" />
+                    <button  class="btn btn-secondary text-nowrap px-5 w-100 py-2 font-weight-700 radius-10 rounded-10 border-0 add-to-cart" style="background: #513819">
+                       Save
+                    </button>
+               </form>
             </div>
           </div>
         </div>

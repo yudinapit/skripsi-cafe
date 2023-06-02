@@ -15,7 +15,7 @@ use App\Http\Controllers\OrderMenuController;
 |
 */
 
-Route::group(['middleware' => ['role:admin']], function () {
+// Route::group(['middleware' => ['role:admin']], function () {
     Route::get('/', [\App\Http\Controllers\Backend\HomeController::class, 'index'])->name('admin.home');
     Route::resource('/tables', TablesController::class, ['names' => 'tables']);
     Route::get('/tables/printBarcode/{id}', [TablesController::class, 'printBarcode'])->name('tables.printBarcode');
@@ -46,5 +46,5 @@ Route::group(['middleware' => ['role:admin']], function () {
     //General routes
     Route::get('/general', [App\Http\Controllers\GeneralController::class, 'index'])->name('admin.general');
     Route::put('/general/{type}', [App\Http\Controllers\GeneralController::class, 'store'])->name('admin.general.store');
-});
+// });
 
