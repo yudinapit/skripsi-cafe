@@ -1,7 +1,7 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="index.html">C Code Coffee</a>
+            <a href="index.html"><img src="{{ asset('assets/frontend/img/logo_wide.png') }}" data-src="{{ asset('assets/frontend/img/logo_wide.png') }}" alt="" class="img-fluid lazy"></a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
             <a href="index.html">St</a>
@@ -11,7 +11,22 @@
             <li class="{{ request()->routeIs('admin.home') ? 'active':'' }}">
                 <a href="{{ route('admin.home') }}" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
-            <li class="menu-header">Starter</li>
+            <li class="menu-header">Dine In</li>
+            <li class="{{ request()->routeIs('order-menu') ? 'active':'' }}">
+                <a href="{{ route('order-menu.index') }}" class="nav-link"><i class="fas fa-fire"></i><span>Menu Order</span></a>
+            </li>
+            <li class="dropdown {{ request()->routeIs('tables.*') ? 'active':'' }}">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                    <span>Table</span></a>
+                <ul class="dropdown-menu">
+                    <li class="{{ request()->routeIs('tables.index') ? 'active':'' }}"><a class="nav-link" href="{{ route('tables.index') }}">All Tables</a></li>
+                    <li class="{{ request()->routeIs('tables.create') ? 'active':'' }}"><a class="nav-link" href="{{ route('tables.create') }}">Create Tables</a></li>
+                </ul>
+            </li>
+            <li class="menu-header">Presence</li>
+            <li class="{{ request()->routeIs('admin.general') ? 'active':'' }}">
+                <a href="{{ route('admin.general') }}" class="nav-link"><i class="fas fa-fire"></i><span>General Information</span></a>
+            </li>
             <li class="dropdown {{ request()->routeIs('category.*') ? 'active':'' }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
                     <span>Category</span></a>
@@ -46,14 +61,6 @@
                     <li class="{{ request()->routeIs('gallery.create') ? 'active':'' }}"><a class="nav-link" href="{{ route('gallery.create') }}">Add Gallery</a></li>
                 </ul>
             </li>
-            <li class="dropdown {{ request()->routeIs('slider.*') ? 'active':'' }}">
-                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
-                    <span>Slider</span></a>
-                <ul class="dropdown-menu">
-                    <li class="{{ request()->routeIs('slider.index') ? 'active':'' }}"><a class="nav-link" href="{{ route('slider.index') }}">All Slider Image</a></li>
-                    <li class="{{ request()->routeIs('slider.create') ? 'active':'' }}"><a class="nav-link" href="{{ route('slider.create') }}">Add Slider Image</a></li>
-                </ul>
-            </li>
             <li class="dropdown {{ request()->routeIs('service.*') ? 'active':'' }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
                     <span>Service</span></a>
@@ -70,25 +77,13 @@
                     <li class="{{ request()->routeIs('staff.create') ? 'active':'' }}"><a class="nav-link" href="{{ route('staff.create') }}">Create Staff</a></li>
                 </ul>
             </li>
-            <li class="dropdown {{ request()->routeIs('tables.*') ? 'active':'' }}">
+            <li class="dropdown {{ request()->routeIs('slider.*') ? 'active':'' }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
-                    <span>Table</span></a>
+                    <span>Slider</span></a>
                 <ul class="dropdown-menu">
-                    <li class="{{ request()->routeIs('tables.index') ? 'active':'' }}"><a class="nav-link" href="{{ route('tables.index') }}">All Tables</a></li>
-                    <li class="{{ request()->routeIs('tables.create') ? 'active':'' }}"><a class="nav-link" href="{{ route('tables.create') }}">Create Tables</a></li>
+                    <li class="{{ request()->routeIs('slider.index') ? 'active':'' }}"><a class="nav-link" href="{{ route('slider.index') }}">All Slider Image</a></li>
+                    <li class="{{ request()->routeIs('slider.create') ? 'active':'' }}"><a class="nav-link" href="{{ route('slider.create') }}">Add Slider Image</a></li>
                 </ul>
-            </li>
-            <li class="{{ request()->routeIs('admin.reserve') ? 'active':'' }}">
-                <a href="{{ route('admin.reserve') }}" class="nav-link"><i class="fas fa-fire"></i><span>Reservations</span></a>
-            </li>
-            <li class="{{ request()->routeIs('order-menu') ? 'active':'' }}">
-                <a href="{{ route('order-menu.index') }}" class="nav-link"><i class="fas fa-fire"></i><span>Menu Order</span></a>
-            </li>
-            <li class="{{ request()->routeIs('admin.order') ? 'active':'' }}">
-                <a href="{{ route('admin.order') }}" class="nav-link"><i class="fas fa-fire"></i><span>Orders</span></a>
-            </li>
-            <li class="{{ request()->routeIs('admin.general') ? 'active':'' }}">
-                <a href="{{ route('admin.general') }}" class="nav-link"><i class="fas fa-fire"></i><span>General Information</span></a>
             </li>
         </ul>
     </aside>
