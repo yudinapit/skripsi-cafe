@@ -630,6 +630,7 @@ class ComposerStaticInit52bcbcfa2e62b04e9b59447711003e9c
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\MenuController' => __DIR__ . '/../..' . '/app/Http/Controllers/MenuController.php',
         'App\\Http\\Controllers\\OrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrderController.php',
+        'App\\Http\\Controllers\\OrderMenuController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrderMenuController.php',
         'App\\Http\\Controllers\\OrderShowController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrderShowController.php',
         'App\\Http\\Controllers\\ReserveController' => __DIR__ . '/../..' . '/app/Http/Controllers/ReserveController.php',
         'App\\Http\\Controllers\\ServiceController' => __DIR__ . '/../..' . '/app/Http/Controllers/ServiceController.php',
