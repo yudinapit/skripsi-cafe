@@ -1,25 +1,32 @@
 @extends('frontend.menu.layout')
 @section('content')
 @section('navbar')
-<div class="pe-4" style="border-right: 2px solid #CDCECE">
-    <img
-        src="{{ asset('assets/frontend/img/logo c-code coffee.svg') }}"
-        style="height: 40px" />
-</div>
-<div class="overflow-auto parent-nav-category ps-2">
-    <ul class="nav nav-pills nav-category gap-3 flex-nowrap">
-        <li class="nav-item">
-          <div class="nav-link category-item active" data-filter="" aria-current="page" style="cursor: pointer">All</div>
-        </li>
-        @foreach ($category as $ctg)
-        <li class="nav-item">
-            <div class="nav-link category-item" data-filter="{{ $ctg->id }}" style="cursor: pointer">{{ $ctg->name }}</div>
-        </li>
-        @endforeach
-    </ul>
+<div>
+    <div class="d-flex align-items-center gap-3 pb-3 w-100">
+        <div class="pe-2">
+            <img
+                src="{{ asset('assets/frontend/img/logo c-code coffee.svg') }}"
+                style="height: 40px" />
+        </div>
+        <div class="w-100">
+            <input class="form-control w-100 custom-search-top" id="searchMenu" placeholder="Search" />
+        </div>
+    </div>
+    <div class="overflow-auto parent-nav-category ps-2">
+        <ul class="nav nav-pills nav-category gap-3 flex-nowrap">
+            <li class="nav-item pe-3" style="border-right: 2px solid #CDCECE">
+              <div class="nav-link category-item active" data-filter="" aria-current="page" style="cursor: pointer">All</div>
+            </li>
+            @foreach ($category as $ctg)
+            <li class="nav-item">
+                <div class="nav-link category-item" data-filter="{{ $ctg->id }}" style="cursor: pointer">{{ $ctg->name }}</div>
+            </li>
+            @endforeach
+        </ul>
+    </div>
 </div>
 @endsection
-<div class="py-5" id="listMenu">
+<div class="py-5 mt-5" id="listMenu">
 </div>
 <div class="fixed-bottom d-flex justify-content-center">
     <div class="bg-body border-top border-grey" style="width: 100%; max-width: 600px">

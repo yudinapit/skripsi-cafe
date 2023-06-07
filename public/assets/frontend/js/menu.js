@@ -13,7 +13,7 @@ $(function() {
     function getMenu(category = '') {
         listMenu.html(skeletonMenu);
         $.ajax({
-            url: `/menu/getMenu?category=${category}`,
+            url: `/menu/getMenu?category=${category}&search=${$('#searchMenu').val()}`,
             type: 'GET',
             success: function(data) {
                 listMenu.html(data);
@@ -21,6 +21,12 @@ $(function() {
             }
         })
     }
+
+    const debouncedHandleInput = (category) => debounce(getMenu(category), 1000);
+    $('#searchMenu').on('keyup', function() {
+        const category = $('.category-item.active').data('filter') ?? null;
+        debouncedHandleInput(category);
+    });
 
     $('.category-item').on('click', function() {
         categoryItem.removeClass('active');
@@ -200,3 +206,16 @@ function numberFormatMoney(n) {
     return n[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     // + '.' + (n[1] || '00')
 }
+
+
+function debounce(func, delay) {
+    let timeoutId;
+
+    return function(...args) {
+      clearTimeout(timeoutId);
+
+      timeoutId = setTimeout(() => {
+        func.apply(this, args);
+      }, delay);
+    };
+  }

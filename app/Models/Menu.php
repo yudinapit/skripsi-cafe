@@ -27,6 +27,8 @@ class Menu extends Model
     {
         return $query->when($filter->category ?? false, function ($query) use ($filter) {
             return $query->where('category_id', $filter->category);
+        })->when($filter->search ?? false, function ($query) use ($filter) {
+            return $query->where('title', 'like', '%' . $filter->search . '%');
         });
     }
 }

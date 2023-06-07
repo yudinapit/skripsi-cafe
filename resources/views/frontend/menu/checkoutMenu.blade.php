@@ -1,11 +1,13 @@
 @extends('frontend.menu.layout')
 @section('content')
 @section('navbar')
-<a href="{{ url("/menu/list/$code_table") }}">
-    <img src="{{ asset('assets/img/arrow-left.svg') }}" alt="">
-</a>
-<div class="font-size-18 font-weight-600 mx-auto">
-    Review My Order
+<div class="d-flex align-items-center">
+    <a href="{{ url("/menu/list/$code_table") }}">
+        <img src="{{ asset('assets/img/arrow-left.svg') }}" alt="">
+    </a>
+    <div class="font-size-18 font-weight-600 mx-auto">
+        Review My Order
+    </div>
 </div>
 @endsection
 @push('css')

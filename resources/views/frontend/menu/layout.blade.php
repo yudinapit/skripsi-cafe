@@ -53,7 +53,7 @@
         <div class="page">
             @if(!($navbar_false ?? false))
             <div class="fixed-top d-flex justify-content-center">
-                <div class="d-flex align-items-center gap-3 px-4 py-3 bg-white border-bottom border-grey" style="width: 100%; max-width: 600px">
+                <div class="px-4 py-3 bg-white border-bottom border-grey" style="width: 100%; max-width: 600px">
                     @yield('navbar')
                 </div>
             </div>
