@@ -1,6 +1,16 @@
 # Change Log
 
-## 1.17.0 - 2023-XX-XX
+## 1.18.1 - 2023-05-17
+
+- [#242](https://github.com/php-http/discovery/pull/242) - Better exception message when no legacy php-http message factories can be built. Also needs php-http/message-factory package and they are deprecated in favor of PSR-17 anyways.
+
+## 1.18.0 - 2023-05-03
+
+- [#235](https://github.com/php-http/discovery/pull/235) - Deprecate HttpClientDiscovery, use Psr18ClientDiscovery instead
+- [#238](https://github.com/php-http/discovery/pull/238) - Skip requiring php-http/message-factory when installing symfony/http-client 6.3+
+- [#239](https://github.com/php-http/discovery/pull/239) - Skip auto-installing when the root package's extra.discovery is enough
+
+## 1.17.0 - 2023-04-26
 
 - [#230](https://github.com/php-http/discovery/pull/230) - Add Psr18Client to make it straightforward to use PSR-18
 - [#232](https://github.com/php-http/discovery/pull/232) - Allow pinning the preferred implementations in composer.json

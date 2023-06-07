@@ -12,9 +12,9 @@
                         <thead>
                             <tr>
                                 <th>No.</th>
-                                <th>Name</th>
-                                <th>Barcode</th>
-                                <th>Status</th>
+                                <th>Table Number</th>
+                                <th>QR Code</th>
+                                <!-- <th>Status</th> -->
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -29,14 +29,14 @@
                                                 {!! DNS2D::getBarcodeHTML(url('/menu/list').'/'.$item->barcode, 'QRCODE', 5, 5) !!}
                                             </div>
                                         </td>
-                                        <td>
+                                        <!-- <td>
                                             <span class="badge badge-{{ $item->status == 'available' ? 'dark' : 'danger' }}">
                                                 {{ $item->status }}
                                             </span>
-                                        </td>
+                                        </td> -->
                                         <td>
                                             <a class="btn btn-dark" href="{{ route('tables.printBarcode', $item->id) }}">Print</a>
-                                            <a class="btn btn-primary" href="{{ route('tables.edit', $item->id) }}">Edit</a>
+                                            <!-- <a class="btn btn-primary" href="{{ route('tables.edit', $item->id) }}">Edit</a> -->
                                             <button class="btn btn-danger delete" type="button" id="{{ $item->id }}" class="btn btn-primary"
                                                 data-toggle="modal" data-target="#exampleModal">Delete</button>
                                         </td>

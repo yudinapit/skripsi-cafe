@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('tables', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->integer('name');
             $table->string('barcode');
             $table->enum('status', ['available', 'unavailable'])->default('available');
             $table->timestamps();

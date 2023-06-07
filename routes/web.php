@@ -37,10 +37,10 @@ Route::post('/cart/update/{user}', [App\Http\Controllers\CartController::class, 
 Route::get('/cart/delete/{cart}/{user}', [App\Http\Controllers\CartController::class, 'destroy'])->name('cart.delete');
 Route::get('/cart/{menu}/{user}', [App\Http\Controllers\CartController::class, 'addCart'])->name('cart.add');
 // checkout
-Route::get('/order/{user}', [App\Http\Controllers\OrderController::class, 'checkout'])->name('checkout');
-Route::post('/order/{user}', [App\Http\Controllers\OrderController::class, 'order'])->name('order');
-Route::get('/payment/succes/{order}', [App\Http\Controllers\OrderController::class, 'success'])->name('success');
-Route::get('/payment/cancel', [App\Http\Controllers\OrderController::class, 'cancel'])->name('cancel');
+// Route::get('/order/{user}', [App\Http\Controllers\OrderController::class, 'checkout'])->name('checkout');
+// Route::post('/order/{user}', [App\Http\Controllers\OrderController::class, 'order'])->name('order');
+// Route::get('/payment/succes/{order}', [App\Http\Controllers\OrderController::class, 'success'])->name('success');
+// Route::get('/payment/cancel', [App\Http\Controllers\OrderController::class, 'cancel'])->name('cancel');
 
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
