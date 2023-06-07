@@ -4,18 +4,21 @@
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
                 <div class="footer_wp">
                     <i class="icon_pin_alt"></i>
-                    <h3>Address</h3>
+                    <h3>Contact us</h3>
                     <p>{!! $general ? $general->address:'' !!}</p>
+                    <a href="tel:009442323221">{{ $general ? $general->primary_phone:'' }} </a>
+                    <a href="tel:009442323221">{{ $general ? $general->secondary_phone:'' }} </a>
+                    <a href="#0">{{ $general ? $general->email:'' }}</a>
                 </div>
             </div>
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
                 <div class="footer_wp">
                     <i class="icon_tag_alt"></i>
-                    <h3>Reservations</h3>
+                    <h3>Find us at</h3>
                     <p>
-                        <a href="tel:009442323221">{{ $general ? $general->primary_phone:'' }} </a>
-                        <a href="tel:009442323221">{{ $general ? $general->secondary_phone:'' }} </a>
-                        <a href="#0">{{ $general ? $general->email:'' }}</a>
+                        <p class="ganti-font"><span><a href="https://gofood.link/u/v2aRYq"><img src="{{ asset('assets/frontend/img/GoFood.png') }}" style="width:50%"></span></p>
+                        <p class="margin_top_20"><span><a href="https://food.grab.com/id/id/restaurant/c-code-coffee-tomang-delivery/6-C2AFSBBEJXMTEN"><img src="{{ asset('assets/frontend/img/GrabFood.png') }}" style="width:50%"></a></span></p>
+                        <!-- <p class="margin_top_20"><span><a href="https://tokopedia.link/Fyr9398M0zb"><img src="{{ asset('assets/frontend/img/tokopedia.png') }}" style="width:50%"></span></p> -->
                     </p>
                 </div>
             </div>

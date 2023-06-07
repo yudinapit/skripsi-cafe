@@ -8,17 +8,7 @@
                 <img src="{{ asset($general ? $general->logo:'') }}" width="60" height="60" alt="" class="logo_sticky">
             </a>
         </div>
-        <!-- <ul id="top_menu">
-            <li><a href="#0" class="search-overlay-menu-btn"><i class="fas fa-search"></i></a></li>
-            @guest
-                @else
-                <li>
-                    <div class="dropdown dropdown-cart">
-                        <a href="{{ route('getcart', auth()->user()->id) }}" class="cart_bt"><i class="fas fa-cart-plus"></i> <strong>{{ App\Models\Cart::where('user_id', auth()->user()->id)->sum('quantity'); }}</strong></a>
-                    </div>
-                </li>
-            @endguest
-        </ul> -->
+     
         <!-- /top_menu -->
         <a href="#" class="open_close">
             <i class="icon_menu"></i><span>Menu</span>

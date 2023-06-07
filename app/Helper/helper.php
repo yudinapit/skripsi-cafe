@@ -21,3 +21,32 @@ function uploadImage($image, $path, $old_path = null) {
         return $url;
     }
 }
+
+function getStatusOrder($order) {
+    $badge = '';
+    $status = '';
+    switch($order) {
+        case 1 :
+            $status = 'Belum Diproses';
+            $badge = 'primary';
+            break;
+        case 2 :
+            $status = 'Sudah Diproses';
+            $badge = 'secondary';
+            break;
+        case 3 :
+            $status = 'Dibayar';
+            $badge = 'success';
+            break;
+        case 4  :
+            $status = 'Selesai';
+            $badge = 'dark';
+            break;
+        case 5 :
+            $status = 'Cancel';
+            $badge = 'danger';
+            break;
+    }
+
+    return "<span class='badge badge-$badge'>$status</span>";
+}

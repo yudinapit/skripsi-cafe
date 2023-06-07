@@ -55,7 +55,7 @@
     </div>
 
 
-    <section class="container margin_120_100">
+    <!-- <section class="container margin_120_100">
         <div class="row">
             <div class="col-xl-4">
                 <a href="{{ route('menu') }}" class="img_container">
@@ -67,7 +67,7 @@
                 </a>
             </div>
             <div class="col-xl-4">
-                <a href="menu.html" class="img_container">
+                <a href="{{ route('allblogs') }}" class="img_container">
                     <img src="{{ asset('assets/frontend/img/banner_3.jpg') }}" class="lazy">
                     <div class="short_info opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.5)">
                         <h3>Our Blogs</h3>
@@ -76,7 +76,7 @@
                 </a>
             </div>
             <div class="col-xl-4">
-                <a href="menu.html" class="img_container">
+                <a href="{{ route('contact') }}" class="img_container">
                     <img src="{{ asset('assets/frontend/img/banner_4.jpg') }}" class="lazy">
                     <div class="short_info opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.5)">
                         <h3>Say Something?</h3>
@@ -112,7 +112,7 @@
                 </a>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
     <!-- <div class="bg_gray">
@@ -176,10 +176,19 @@
                             <h2>Enjoy<span>a Special Event with us!</span></h2>
                             <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
                                 consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                            <a href="contacts.html" class="btn_1 mt-3">Contact us</a>
+                            <a href="{{ route('about') }}" class="btn_1 mt-3">Contact us</a>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-5 col-md-6 text-center">
+                        
+                            <!-- <a href="{{ route('allblogs') }}" class="img_container">
+                                <img src="{{ asset('assets/frontend/img/banner_3.jpg') }}" class="lazy">
+                                <div class="short_info opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.5)">
+                                    <h3>Our Blogs</h3>
+                                    <p>Checkout our latest blogs</p>
+                                </div>
+                            </a> -->
+                        
                         <div class="call_section_img" data-cue="slideInUp">
                             <img src="{{ asset('assets/frontend/img/bg_call_section.jpg') }}" alt="call" class="img-fluid">
                         </div>
@@ -210,7 +219,7 @@
                                         </div>
                                         <div id="DatePicker"></div>
                                     </div>
-                                    <!-- /step-->
+                                     /step-->
                                     <!-- <div class="step">
                                         <h3 class="main_question"><strong>2/3</strong> Select time and guests</h3>
                                         <div class="step_wrapper">

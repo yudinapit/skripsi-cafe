@@ -30,8 +30,8 @@
                             <h3>{{ $item->title }}</h3>
                             <p>{{ $item->category->name }}</p>
                             <div class="price_box">
-                                <span class="new_price">${{ $item->price }}</span>
-                                {{-- <span class="old_price">${{ $item->price }}</span> --}}
+                                <span class="new_price">IDR {{ $item->price }}</span>
+                                {{-- <span class="old_price">IDR {{ $item->price }}</span> --}}
                             </div>
                             <!-- @guest
                                     <a href="javascript:void(0)" class="btn_1" data-bs-toggle="modal" data-bs-target="#exampleModal">add to cart</a>
@@ -64,8 +64,8 @@
                             <h3>{{ $item->title }}</h3>
                             <p>{{ $item->category->name }}</p>
                             <div class="price_box">
-                                <span class="new_price">${{ $item->price }}</span>
-                                {{-- <span class="old_price">${{ $item->price }}</span> --}}
+                                <span class="new_price">IDR {{ $item->price }}</span>
+                                {{-- <span class="old_price">IDR {{ $item->price }}</span> --}}
                             </div>
                             <!-- @guest
                                     <a href="javascript:void(0)" class="btn_1" data-bs-toggle="modal" data-bs-target="#exampleModal">add to cart</a>
