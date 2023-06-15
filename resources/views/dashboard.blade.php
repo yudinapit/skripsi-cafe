@@ -62,7 +62,7 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
-                    <h4>Order List</h4>
+                    <h4>Table List</h4>
                     <div class="card-header-action">
                         <a href="{{ route('admin.order') }}" class="btn btn-primary">View all Orders <i class="fas fa-chevron-right"></i></a>
                     </div>
@@ -70,12 +70,14 @@
                 <div class="card-body p-0">
                     <div class="table-responsive table-invoice">
                         <table class="table table-striped">
-                            <tr>
-                                <th>Name</th>
-                                <th>Phone</th>
-                                <th>Status</th>
-                            </tr>
-                           
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <!-- <th>Status</th> -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
                         </table>
                     </div>
                 </div>
@@ -84,7 +86,7 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
-                    <h4>Reservation List</h4>
+                    <h4>Order List</h4>
                     <div class="card-header-action">
                         <a href="{{ route('admin.reserve') }}" class="btn btn-primary">View all Reservation <i class="fas fa-chevron-right"></i></a>
                     </div>

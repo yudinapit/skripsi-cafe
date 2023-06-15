@@ -43,8 +43,8 @@
                 </div>
                 <div class="col-lg-5 pt-lg-4" data-cue="slideInUp" data-delay="500">
                     <div class="main_title">
-                        <span><em></em></span>
-                        <h2>About us</h2>
+                        <span class="mb-4"><em></em></span>
+                        <!-- <h2>About us</h2> -->
                         <p>{{ $general ? $general->story_title:'' }}</p>
                     </div>
                     <p>{!! $general ? $general->story_description:'' !!}</p>
@@ -174,9 +174,9 @@
                     <div class="col-xl-6 col-lg-5 col-md-6 text-center">
                         <div class="box_1" data-cue="slideInUp">
                             <h2>Enjoy<span>a Special Event with us!</span></h2>
-                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                            <a href="{{ route('about') }}" class="btn_1 mt-3">Contact us</a>
+                            <!-- <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p> -->
+                            <a href="{{ route('about') }}" class="btn_1 mt-1">Contact us</a>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-5 col-md-6 text-center">
@@ -189,8 +189,18 @@
                                 </div>
                             </a> -->
                         
-                        <div class="call_section_img" data-cue="slideInUp">
-                            <img src="{{ asset('assets/frontend/img/bg_call_section.jpg') }}" alt="call" class="img-fluid">
+                        <div class="box_1" data-cue="slideInUp">
+                           
+                                
+                                    <!-- <i class="icon_clock_alt"></i> -->
+                                    <h2><span>Opening Hours</span></h2>
+                                    <div>Senin s/d Kamis 10.00 - 23.00</div>
+                                    <div>Jum'at 010.00 - 24.00</div>
+                                    <div>Sabtu 11.00 - 24.00</div>
+                                    <div>Minggu 11.00 - 23.00</div>
+                                
+                           
+                            <!-- <img src="{{ asset('assets/frontend/img/bg_call_section.jpg') }}" alt="call" class="img-fluid"> -->
                         </div>
                     </div>
                 </div>

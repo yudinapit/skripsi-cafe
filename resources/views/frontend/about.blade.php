@@ -2,9 +2,10 @@
 @section('title', 'About')
 
 @section('breadcrumb')
-    <div class="col-xl-9 col-lg-10 col-md-8">
-        <h1>About</h1>
-        <p>Cooking delicious and tasty food since</p>
+    <div class="col-xl-8 col-lg-8 col-md-8">
+        <!-- <h1>About</h1>
+        <p>Cooking delicious and tasty food since</p> -->
+        <h1 class="heading_1">{{ $general ? $general->story_title:'' }}</h1>
     </div>
 @endsection
 @section('content')
@@ -12,12 +13,12 @@
     <div class="container margin_120_100 home_intro">
         <div class="row justify-content-center text-center">
             <div class="col-lg-7" data-cue="slideInUp" data-delay="500">
-                <div class="main_title center">
-                    <span><em></em></span>
-                    <h2>Our Story</h2>
-                    <p>{{ $general ? $general->story_title:'' }}</p>
+                <div class="main_title center heading_2">
+                    <!-- <span><em></em></span> -->
+                    <!-- <h2>Our Story</h2> -->
+                    <!-- <h2>{{ $general ? $general->story_title:'' }}</h2> -->
                 </div>
-                <p>{!! $general ? $general->story_description:'' !!}</p>
+                <h2 class="heading_2">{!! $general ? $general->story_description:'' !!}</h2>
             </div>
         </div>
     </div>
@@ -30,7 +31,7 @@
                 <div class="intro_txt" data-cue="slideInUp" data-delay="500">
                     <div class="main_title">
                         <span><em></em></span>
-                        <h2>Why Choose Foore</h2>
+                        <h2>Why Choose Us</h2>
                     </div>
                     <p class="lead">{!! $general ? $general->why_choose_us:'' !!}</p>
                 </div>

@@ -39,7 +39,7 @@ class OrderShowController extends Controller
         $order->order_status = 2;
         $order->update();
         Mail::to($order->email)->send(new Reservation($data));
-        return back()->with('toast_success', "Yoyr order has cancelled!");
+        return back()->with('toast_success', "Your order has cancelled!");
     }
 
     public function delete(Order $order)

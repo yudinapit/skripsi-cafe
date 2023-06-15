@@ -135,7 +135,7 @@ html * {
 }
 
 body {
-    background: #fff;
+    background: #fff !important;
     font-size: 14px;
     font-size: 0.875rem;
     line-height: 1.7;
@@ -605,7 +605,9 @@ header.sticky a.open_close {
 }
 
 .main-menu>ul>li:hover>a {
-    color: #513819;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 16px;
 }
 
 header.header_in .main-menu>ul>li>a,
@@ -1814,7 +1816,7 @@ a.img_container .short_info p {
     background-size: cover !important;
     border-radius: 10px;
     overflow: hidden;
-    padding: 120px 0px;
+    padding: 80px 0px 120px 0px;
 }
 
 @media (max-width: 767px) {
@@ -1838,6 +1840,11 @@ a.img_container .short_info p {
     opacity: 0.8;
     font-size: 16px;
     font-size: 1rem;
+}
+
+.call_section .box_1 i {
+    opacity: 0.8;
+    font-size: 46px;
 }
 
 .call_section .box_1 h2 {
@@ -3103,7 +3110,7 @@ a.img_container .short_info p {
 }
 
 .box_contacts i {
-    font-size: 46px;
+    font-size: 46px !important;
     font-size: 2.875rem;
     color: #513819;
 }
@@ -3254,7 +3261,7 @@ iframe.map_contact {
 }
 
 .bg_gray {
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
 }
 
 .bg_gray.pattern {
@@ -3262,7 +3269,7 @@ iframe.map_contact {
 }
 
 .pattern_2 {
-    background: url(../img/reserve_bg.jpg) no-repeat center center;
+    /* background: url(../img/reserve_bg.jpg) no-repeat center center; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -4176,6 +4183,8 @@ footer .copy {
     margin-bottom: 20px;
     border-radius: 10px;
     background: #513819;
+    display: flex;
+    align-items: center;
 }
 
 .box_how h3 {
@@ -4195,6 +4204,7 @@ footer .copy {
     overflow: hidden;
     border-radius: 50%;
     background: #fff;
+    margin: 10px 20px 10px 10px;
 }
 
 .box_how figure img {
@@ -4598,4 +4608,15 @@ footer .copy {
 
 .sticky .total_drop a {
     color: #fff;
+}
+
+.heading_2 {
+    font-size: 24px !important;
+    line-height: 150%;
+}
+
+.heading_1 {
+    margin-top: 2rem !important;
+    font-size: 38px !important;
+    line-height: 125% !important;
 }

@@ -7,13 +7,14 @@
             <a href="index.html">St</a>
         </div>
         <ul class="sidebar-menu">
-            <li class="menu-header">Dashboard</li>
-            <li class="{{ request()->routeIs('admin.home') ? 'active':'' }}">
-                <a href="{{ route('admin.home') }}" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
-            </li>
+            <!-- <li class="menu-header">Dashboard</li> -->
+            
             <li class="menu-header">Dine In</li>
-            <li class="{{ request()->routeIs('order-menu') ? 'active':'' }}">
+            <!-- <li class="{{ request()->routeIs('order-menu') ? 'active':'' }}">
                 <a href="{{ route('order-menu.index') }}" class="nav-link"><i class="fas fa-fire"></i><span>Menu Order</span></a>
+            </li> -->
+            <li class="{{ request()->routeIs('admin.home') ? 'active':'' }}">
+                <a href="{{ route('admin.home') }}" class="nav-link"><i class="fas fa-fire"></i><span>Menu Order</span></a>
             </li>
             <li class="dropdown {{ request()->routeIs('tables.*') ? 'active':'' }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>

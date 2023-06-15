@@ -57,7 +57,7 @@
 
     <main>
 		@if (!Route::is('home'))
-		<div class="hero_single inner_pages background-image mb-4" data-background="url({{ asset('assets/frontend/img/hero_general.jpg') }})">
+		<div class="hero_single inner_pages background-image" data-background="url({{ asset('assets/frontend/img/hero_general.jpg') }})">
 			<div class="opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">
 				<div class="container">
 					<div class="row justify-content-center">

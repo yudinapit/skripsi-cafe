@@ -22,12 +22,14 @@ $(function() {
         })
     }
 
+    // search
     const debouncedHandleInput = (category) => debounce(getMenu(category), 1000);
     $('#searchMenu').on('keyup', function() {
         const category = $('.category-item.active').data('filter') ?? null;
         debouncedHandleInput(category);
     });
 
+    // category filter
     $('.category-item').on('click', function() {
         categoryItem.removeClass('active');
         $(this).addClass('active');
@@ -35,6 +37,8 @@ $(function() {
         getMenu(category);
     });
 
+
+   // add to cart
    listMenu.on('click', '.menu-item', function() {
         const id = $(this).data('id');
         getData(`/menu/getDetailMenu/${id}`, {select: 'id,title,price'}, 'GET', function(data) {
@@ -49,7 +53,8 @@ $(function() {
             modalDetailMenu.modal('show');
         });
     });
-
+    
+    //quantity
     modalDetailMenu.on('click', '.add-qty-detail', function() {
         const qty = parseInt(qtyMenuInput.val());
         qtyMenuInput.val(qty + 1);
@@ -108,6 +113,7 @@ $(function() {
     });
 
 });
+
 
 function setAddToCart(data) {
     let cart = getCart();
